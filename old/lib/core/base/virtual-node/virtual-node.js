@@ -109,9 +109,9 @@ class VirtualNode extends AbstractVirtualNode {
     if (!this._cache.hasOwnProperty('attrNames')) {
       let attrs;
 
-      // eslint-disable-next-line no-restricted-syntax
+       
       if (this.actualNode.attributes instanceof window.NamedNodeMap) {
-        // eslint-disable-next-line no-restricted-syntax
+         
         attrs = this.actualNode.attributes;
       }
       // if the attributes property is not of type NamedNodeMap

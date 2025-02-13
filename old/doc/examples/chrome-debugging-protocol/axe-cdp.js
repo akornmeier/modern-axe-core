@@ -10,7 +10,7 @@ const isValidURL = input => {
 };
 
 const example = async url => {
-  // eslint-disable-next-line new-cap
+   
   const client = await CDP();
   const { Runtime: runtime, Page: page } = client;
 

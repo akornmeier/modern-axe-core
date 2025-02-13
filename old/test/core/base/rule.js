@@ -1935,7 +1935,7 @@ describe('Rule', () => {
 
       it('throws if impact is invalid', () => {
         assert.throws(() => {
-          // eslint-disable-next-line no-new
+           
           new Rule({ impact: 'hello' });
         });
       });

@@ -49,7 +49,7 @@ describe('SerialVirtualNode', function () {
     it('does not throw if nodeType is falsy', function () {
       [null, undefined].forEach(function (nonThrowingNodeType) {
         assert.doesNotThrow(function () {
-          // eslint-disable-next-line no-new
+           
           new SerialVirtualNode({
             nodeType: nonThrowingNodeType,
             nodeName: 'div'
@@ -61,7 +61,7 @@ describe('SerialVirtualNode', function () {
     it('throws if nodeType is a not a number', function () {
       [true, 'one', '1', { foo: 'bar' }].forEach(function (throwingNodeType) {
         assert.throws(function () {
-          // eslint-disable-next-line no-new
+           
           new SerialVirtualNode({
             nodeType: throwingNodeType,
             nodeName: 'div'
@@ -118,7 +118,7 @@ describe('SerialVirtualNode', function () {
     it('throws if nodeName is not a string', function () {
       [123, true, null, {}, undefined, []].forEach(function (notAString) {
         assert.throws(function () {
-          // eslint-disable-next-line no-new
+           
           new SerialVirtualNode({ nodeName: notAString });
         });
       });
@@ -235,7 +235,7 @@ describe('SerialVirtualNode', function () {
     it('throws if the value is an object (for except null)', function () {
       [{}, [], /foo/].forEach(function (someObject) {
         assert.throws(function () {
-          // eslint-disable-next-line no-new
+           
           new SerialVirtualNode({
             nodeName: 'div',
             attributes: { foo: someObject }

@@ -7,9 +7,9 @@
  * @returns {NamedNodeMap}
  */
 function getNodeAttributes(node) {
-  // eslint-disable-next-line no-restricted-syntax
+   
   if (node.attributes instanceof window.NamedNodeMap) {
-    // eslint-disable-next-line no-restricted-syntax
+     
     return node.attributes;
   }
 

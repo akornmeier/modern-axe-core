@@ -52,7 +52,7 @@ function configure(spec) {
     spec.checks.forEach(check => {
       if (!check.id) {
         throw new TypeError(
-          // eslint-disable-next-line max-len
+           
           `Configured check ${JSON.stringify(
             check
           )} is invalid. Checks must be an object with at least an id property`
@@ -72,7 +72,7 @@ function configure(spec) {
     spec.rules.forEach(rule => {
       if (!rule.id) {
         throw new TypeError(
-          // eslint-disable-next-line max-len
+           
           `Configured rule ${JSON.stringify(
             rule
           )} is invalid. Rules must be an object with at least an id property`

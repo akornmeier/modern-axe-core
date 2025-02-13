@@ -39,7 +39,7 @@ function cloneRecused(obj, seen) {
 
   const out = {};
   seen.set(obj, out);
-  // eslint-disable-next-line guard-for-in
+   
   for (const key in obj) {
     out[key] = cloneRecused(obj[key], seen);
   }
