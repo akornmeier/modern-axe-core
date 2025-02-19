@@ -4,9 +4,51 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsup",
+    "dev": "vite",
+    "test": "vitest run --coverage",
+    "test:watch": "vitest",
+    "test:browser": "vitest --workspace=vitest.workspace.ts",
+    "format": "prettier --write .",
+    "lint": "oxlint && eslint . --fix",
+    "lint:old": "oxlint && eslint ./old --fix"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^22.13.1",
+    "@vitest/browser": "^3.0.5",
+    "eslint": "^9.20.1",
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-plugin-oxlint": "^0.15.10",
+    "lint-staged": "^15.4.3",
+    "oxlint": "^0.15.10",
+    "playwright": "^1.50.1",
+    "prettier": "^3.5.0",
+    "simple-git-hooks": "^2.11.1",
+    "tsup": "^8.3.6",
+    "vite": "^6.1.0",
+    "vitest": "^3.0.5"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm exec lint-staged",
+    "pre-push": "pnpm format"
+  },
+  "lint-staged": {
+    "**/*.{js,mjs,cjs,jsx,ts,mts,cts,tsx,vue,astro,svelte}": "oxlint"
+  },
+  "engines": {
+    "node": ">=22",
+    "pnpm": ">=10",
+    "npm": "please use pnpm",
+    "yarn": "please use pnpm"
+  },
+  "packageManager": "pnpm@10.3.0",
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "msw",
+      "simple-git-hooks"
+    ]
+  }
 }

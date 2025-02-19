@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "target": "ESNext", // Use the latest ECMAScript features
+    "module": "ESNext", // Use native ES modules
+    "lib": ["DOM", "ESNext"], // Include DOM for browser APIs and ESNext library features
+    "moduleResolution": "node", // Resolve modules in Node style
+    "strict": true, // Enable strict type checking
+    "esModuleInterop": true, // Allow default imports for CommonJS modules
+    "skipLibCheck": true, // Skip type checking of declaration files for speed
+    "forceConsistentCasingInFileNames": true, // Enforce consistent file casing
+    "declaration": true, // Generate declaration (.d.ts) files for consumers
+    "declarationMap": true, // Generate sourcemaps for declaration files
+    "sourceMap": true, // Generate sourcemaps for debugging
+    "outDir": "dist", // Output directory for compiled files
+    "baseUrl": ".", // Base directory for non-relative module names
+    "paths": {
+      "~/*": ["src/*"] // Use tilde as an alias for the src directory
+    },
+    "types": ["node", "vite/client"] // Include Node.js and Vite client types
+  },
+  "include": [
+    "src/**/*", // Include all source files
+    "types/**/*", // Include custom type declarations (like module augmentations)
+    "test/**/*", // Include unit test files (Vitest)
+    "tests/**/*" // Include end-to-end tests (Playwright)
+  ],
+  "exclude": [
+    "node_modules", // Exclude node_modules
+    "dist" // Exclude build output
+  ]
+}
