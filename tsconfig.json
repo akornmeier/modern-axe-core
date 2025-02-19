@@ -14,7 +14,7 @@
     "outDir": "dist", // Output directory for compiled files
     "baseUrl": ".", // Base directory for non-relative module names
     "paths": {
-      "~": ["src"] // Use tilde as an alias for the src directory
+      "~/*": ["src/*"] // Use tilde as an alias for the src directory
     },
     "types": ["node", "vite/client"] // Include Node.js and Vite client types
   },
